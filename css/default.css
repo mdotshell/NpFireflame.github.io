@@ -1,0 +1,174 @@
+:root {
+    --background: #24292E;
+    --header: #1D2125;
+    --header-hover: #2F363D;
+    --text-1: #D1D5DA;
+    --main-font-1: open sans,Helvetica,sans-serif;
+    --main-font-2: source-sans-pro, sans-serif;
+}
+
+#content-container {
+    flex-grow: 1;
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 32px 0;
+    text-align: center;
+    width: auto
+}
+
+.grid > * {
+    margin: 16px
+}
+
+.grid .grid {
+    padding: 0
+}
+
+.grid .whole {
+    display: block
+}
+
+@media only screen and (min-width:640px) {
+    .grid .half {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 48px)
+    }
+    .grid .half h2 {
+        text-align: left
+    }
+    .grid .third {
+        width: calc(33.33% - 32px);
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 16px
+    }
+    .grid .third:last-child {
+        margin-left: 16px;
+        margin-right: 0
+    }
+    .grid .two-thirds {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(66% - 48px)
+    }
+    .grid *:only-child p {
+        text-align: center
+    }
+}
+
+
+body {
+    background-color: var(--background);
+    box-sizing: border-box;
+    font-family: var(--main-font-1);
+    font-weight: 400;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.nav-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--header);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.nav-content li {
+    float: left;
+}
+
+.nav-content li a {
+    display: block;
+    color: var(--text-1);
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.page-links li a:hover {
+    background-color: var(--header-hover);
+    color: var(--text-1);
+}
+
+.page-links a.active {
+    background-color: var(--background);
+    color: var(--text-1);
+}
+
+.page-links a.active:hover {
+    background-color: var(--background);
+    color: var(--text-1);
+}
+
+.social-media li {
+    float: right;
+}
+
+.welcome-splash {
+    color: var(--text-1);
+    font: 28px / 56px var(--main-font-2);
+    margin: 0;
+    padding-top: 80px;
+    text-align: center;
+}
+
+footer {
+    color: var(--text-1);
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .8;
+}
+
+.social-media li{
+    padding: 10px 5px;
+}
+
+.discord-icon {
+    background: url(/images/light/discord_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.discord-icon:hover {
+    background: url(/images/colored/discord_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.steam-icon {
+    background: url(/images/light/steam_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.steam-icon:hover {
+    background: url(/images/colored/steam_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.github-icon {
+    background: url(/images/light/github_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.github-icon:hover {
+    background: url(/images/colored/github_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
