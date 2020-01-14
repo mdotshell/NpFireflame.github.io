@@ -1,70 +1,30 @@
 :root {
+    --background: #2F3136;
+    --header: #202225;
+    --header-hover: #393C43;
+    --text-1: #D1D5DA;
+    --font-header: 'Raleway', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+/*
+:root {
     --background: #24292E;
     --header: #1D2125;
     --header-hover: #2F363D;
     --text-1: #D1D5DA;
-    --main-font-1: open sans,Helvetica,sans-serif;
-    --main-font-2: source-sans-pro, sans-serif;
+    --font-header: 'Raleway', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
 }
-
-#content-container {
-    flex-grow: 1;
-}
-
-.grid {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 32px 0;
-    text-align: center;
-    width: auto
-}
-
-.grid > * {
-    margin: 16px
-}
-
-.grid .grid {
-    padding: 0
-}
-
-.grid .whole {
-    display: block
-}
-
-@media only screen and (min-width:640px) {
-    .grid .half {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(50% - 48px)
-    }
-    .grid .half h2 {
-        text-align: left
-    }
-    .grid .third {
-        width: calc(33.33% - 32px);
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 16px
-    }
-    .grid .third:last-child {
-        margin-left: 16px;
-        margin-right: 0
-    }
-    .grid .two-thirds {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(66% - 48px)
-    }
-    .grid *:only-child p {
-        text-align: center
-    }
-}
-
+*/
 
 body {
+    color: var(--text-1);
     background-color: var(--background);
     box-sizing: border-box;
-    font-family: var(--main-font-1);
+    font-family: var(--font-body);
     font-weight: 400;
     margin: 0;
     min-height: 100vh;
@@ -114,14 +74,29 @@ body {
 
 .social-media li {
     float: right;
+    background-color: var(--header);
 }
 
 .welcome-splash {
     color: var(--text-1);
-    font: 28px / 56px var(--main-font-2);
+    font: 28px / 56px var(--font-header);
     margin: 0;
-    padding-top: 80px;
     text-align: center;
+}
+
+.content-container {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.monospaced {
+    color: var(--text-1);
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+nav {
+    padding-bottom: 60px;
 }
 
 footer {
@@ -153,6 +128,26 @@ footer {
     background-size: 16px 16px;
 }
 
+.github-icon {
+    background: url(/images/light/github_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.github-icon:hover {
+    background: url(/images/colored/github_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.reddit-icon {
+    background: url(/images/light/reddit_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.reddit-icon:hover {
+    background: url(/images/colored/reddit_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
 .steam-icon {
     background: url(/images/light/steam_light.svg) no-repeat center center;
     background-size: 16px 16px;
@@ -163,12 +158,32 @@ footer {
     background-size: 16px 16px;
 }
 
-.github-icon {
-    background: url(/images/light/github_light.svg) no-repeat center center;
+.twitch-icon {
+    background: url(/images/light/twitch_light.svg) no-repeat center center;
     background-size: 16px 16px;
 }
 
-.github-icon:hover {
-    background: url(/images/colored/github_colored.svg) no-repeat center center;
+.twitch-icon:hover {
+    background: url(/images/colored/twitch_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.twitter-icon {
+    background: url(/images/light/twitter_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.twitter-icon:hover {
+    background: url(/images/colored/twitter_colored.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.youtube-icon {
+    background: url(/images/light/youtube_light.svg) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.youtube-icon:hover {
+    background: url(/images/colored/youtube_colored.svg) no-repeat center center;
     background-size: 16px 16px;
 }
